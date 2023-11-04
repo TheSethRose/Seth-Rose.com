@@ -4,7 +4,6 @@ import siteMetadata from '@/data/siteMetadata'
 import { formatDate } from 'pliny/utils/formatDate'
 import NewsletterForm from 'pliny/ui/NewsletterForm'
 
-/*
 const MAX_DISPLAY = 5
 
 export default function Home({ posts }) {
@@ -92,4 +91,3 @@ export default function Home({ posts }) {
     </>
   )
 }
-*/
