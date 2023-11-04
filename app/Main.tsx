@@ -34,11 +34,6 @@ export default function Home({ posts }) {
     <>
       {/* About Me Section */}
       <div className='divide-y divide-gray-200 dark:divide-gray-700'>
-        <div className='space-y-2 pb-8 pt-6 md:space-y-5 max-w-6xl mx-auto'>
-          <h2 className='text-2xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-3xl sm:leading-10 md:text-4xl md:leading-14'>
-            About Me
-          </h2>
-        </div>
         <div className='items-start space-y-2 xl:grid xl:grid-cols-3 xl:gap-x-8 xl:space-y-0 max-w-6xl mx-auto'>
           <div className='flex flex-col items-center space-x-2 pt-8'>
             {avatar && (
@@ -64,8 +59,15 @@ export default function Home({ posts }) {
           </div>
           <div className='prose max-w-none pb-8 pt-8 dark:prose-invert xl:col-span-2'>
             <p>
-              Hello! I’m [name], a Senior Software Engineer specializing in...
-              [rest of the introduction]
+              Hello! I’m Seth, a Senior Software Engineer specializing in the
+              ServiceNow platform. I’m passionate about shaping digital
+              transformations with streamlined, automated solutions that provide
+              key insights. My enthusiasm for the latest tech gadgets enhances
+              my skills in JavaScript, Python, and AI. Beyond my professional
+              role, I value a work-life balance that inspires my creativity and
+              career growth. My digital portfolio is where I share my
+              technological pursuits, keeping the world in the loop on my latest
+              projects and developments.
             </p>
           </div>
         </div>
@@ -77,9 +79,9 @@ export default function Home({ posts }) {
       {/* Latest Posts Section */}
       <div className='divide-y divide-gray-200 dark:divide-gray-700'>
         <div className='space-y-2 pb-8 pt-6 md:space-y-5 max-w-6xl mx-auto'>
-          <h2 className='text-2xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-3xl sm:leading-10 md:text-4xl md:leading-14'>
+          <h3 className='text-2xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-3xl sm:leading-10 md:text-4xl md:leading-14'>
             Latest Posts
-          </h2>
+          </h3>
         </div>
         <ul className='divide-y divide-gray-200 dark:divide-gray-700 max-w-6xl mx-auto'>
           {!posts.length && 'No posts found.'}
