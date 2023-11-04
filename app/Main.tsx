@@ -9,6 +9,12 @@ import { coreContent } from 'pliny/utils/contentlayer'
 
 const MAX_DISPLAY = 3
 
+/**
+ * Renders the home page.
+ *
+ * @param {Object} posts - an array of posts
+ * @return {JSX.Element} the rendered home page
+ */
 export default function Home({ posts }) {
   const author = allAuthors.find((p) => p.slug === 'default') as Authors
   const content = coreContent(author)
@@ -28,12 +34,12 @@ export default function Home({ posts }) {
     <>
       {/* About Me Section */}
       <div className='divide-y divide-gray-200 dark:divide-gray-700'>
-        <div className='space-y-2 pb-8 pt-6 md:space-y-5'>
-          <h2 className='text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14'>
+        <div className='space-y-2 pb-8 pt-6 md:space-y-5 max-w-6xl mx-auto'>
+          <h2 className='text-2xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-3xl sm:leading-10 md:text-4xl md:leading-14'>
             About Me
           </h2>
         </div>
-        <div className='items-start space-y-2 xl:grid xl:grid-cols-3 xl:gap-x-8 xl:space-y-0'>
+        <div className='items-start space-y-2 xl:grid xl:grid-cols-3 xl:gap-x-8 xl:space-y-0 max-w-6xl mx-auto'>
           <div className='flex flex-col items-center space-x-2 pt-8'>
             {avatar && (
               <Image
@@ -41,10 +47,10 @@ export default function Home({ posts }) {
                 alt='avatar'
                 width={192}
                 height={192}
-                className='h-48 w-48 rounded-full'
+                className='h-36 w-36 rounded-full'
               />
             )}
-            <h3 className='pb-2 pt-4 text-2xl font-bold leading-8 tracking-tight'>
+            <h3 className='pb-2 pt-4 text-xl font-bold leading-8 tracking-tight'>
               {name}
             </h3>
             <div className='text-gray-500 dark:text-gray-400'>{occupation}</div>
@@ -58,27 +64,8 @@ export default function Home({ posts }) {
           </div>
           <div className='prose max-w-none pb-8 pt-8 dark:prose-invert xl:col-span-2'>
             <p>
-              As a Senior Software Engineer with expertise in the ServiceNow
-              platform, I guide businesses through their digital transformation
-              by crafting tailored solutions that boost efficiency, automate
-              operations, and unlock valuable insights to advance their digital
-              goals. My passion for cutting-edge gadgets fuels my ongoing
-              learning, enhancing my programming skills in languages like
-              JavaScript and Python, and keeping me up-to-date with the latest
-              in AI technology. This relentless pursuit of knowledge ensures
-              that my contributions remain effective and relevant in the rapidly
-              evolving tech landscape.
-            </p>
-            <p>
-              My commitment extends beyond my professional life. I place high
-              value on the balance between work and personal time, understanding
-              that it's essential for personal growth and success in the tech
-              field. This balance helps me stay creative and refreshed. Through
-              my digital portfolio, my aim is to share my journey and insights,
-              inviting the tech community to explore and discuss innovative
-              ideas. By highlighting my projects and sharing my experiences in
-              blog posts, I aim to enrich the collective understanding and spark
-              meaningful engagement in the dynamic arena of technology.
+              Hello! I’m [name], a Senior Software Engineer specializing in...
+              [rest of the introduction]
             </p>
           </div>
         </div>
@@ -89,12 +76,12 @@ export default function Home({ posts }) {
 
       {/* Latest Posts Section */}
       <div className='divide-y divide-gray-200 dark:divide-gray-700'>
-        <div className='space-y-2 pb-8 pt-6 md:space-y-5'>
-          <h2 className='text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14'>
+        <div className='space-y-2 pb-8 pt-6 md:space-y-5 max-w-6xl mx-auto'>
+          <h2 className='text-2xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-3xl sm:leading-10 md:text-4xl md:leading-14'>
             Latest Posts
           </h2>
         </div>
-        <ul className='divide-y divide-gray-200 dark:divide-gray-700'>
+        <ul className='divide-y divide-gray-200 dark:divide-gray-700 max-w-6xl mx-auto'>
           {!posts.length && 'No posts found.'}
           {posts.slice(0, MAX_DISPLAY).map((post) => {
             const { slug, date, title, summary, tags } = post
@@ -113,31 +100,31 @@ export default function Home({ posts }) {
                     <div className='space-y-5 xl:col-span-3'>
                       <div className='space-y-6'>
                         <div>
-                          <h2 className='text-2xl font-bold leading-8 tracking-tight'>
+                          <h3 className='text-xl font-bold leading-8 tracking-tight'>
                             <Link
                               href={`/blog/${slug}`}
                               className='text-gray-900 dark:text-gray-100'
                             >
                               {title}
                             </Link>
-                          </h2>
+                          </h3>
                           <div className='flex flex-wrap'>
                             {tags.map((tag) => (
                               <Tag key={tag} text={tag} />
                             ))}
                           </div>
                         </div>
-                        <div className='prose max-w-none text-gray-500 dark:text-gray-400'>
+                        <div className='prose text-gray-500 max-w-none dark:text-gray-400'>
                           {summary}
                         </div>
                       </div>
                       <div className='text-base font-medium leading-6'>
                         <Link
                           href={`/blog/${slug}`}
-                          className='text-primary-500 hover:text-primary-600 dark:hover:text-primary-400'
-                          aria-label={`Read more: "${title}"`}
+                          className='text-blue-500 hover:text-blue-600 dark:hover:text-blue-400'
+                          aria-label={`Read "${title}"`}
                         >
-                          Read more &rarr;
+                          Read more →
                         </Link>
                       </div>
                     </div>
