@@ -4,24 +4,14 @@ import siteMetadata from '@/data/siteMetadata'
 import { formatDate } from 'pliny/utils/formatDate'
 import SocialIcon from '@/components/social-icons'
 import Image from '@/components/Image'
-import { useEffect, useState } from 'react'
 import { Authors, allAuthors } from 'contentlayer/generated'
 import { coreContent } from 'pliny/utils/contentlayer'
 
 const MAX_DISPLAY = 3
 
 export default function Home({ posts }) {
-  const [content, setContent] = useState(null)
-
-  useEffect(() => {
-    const author = allAuthors.find((p) => p.slug === 'default') as Authors
-    const mainContent = coreContent(author)
-    setContent(mainContent)
-  }, [])
-
-  if (!content) {
-    return null // or some loading indicator
-  }
+  const author = allAuthors.find((p) => p.slug === 'default') as Authors
+  const content = coreContent(author)
 
   const {
     name,
