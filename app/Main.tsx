@@ -1,17 +1,18 @@
 import Link from '@/components/Link'
 import Tag from '@/components/Tag'
-import About from '@/app/about/page';
+//import About from '@/app/about/page';
 import siteMetadata from '@/data/siteMetadata'
 import { formatDate } from 'pliny/utils/formatDate'
 import NewsletterForm from 'pliny/ui/NewsletterForm'
 
+/*
 export default function Home() {
   return (
     <About />
   );
 }
+*/ 
 
-/*
 const MAX_DISPLAY = 5 // Max number of blog posts to display
 
 export default function Home({ posts }) {
@@ -97,4 +98,3 @@ export default function Home({ posts }) {
     </>
   )
 }
-*/
