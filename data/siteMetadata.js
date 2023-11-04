@@ -1,6 +1,6 @@
 /** @type {import("pliny/config").PlinyConfig } */
 const siteMetadata = {
-  title: 'Seth-Rose.com: Personal Portfolio',
+  title: 'Seth-Rose.com',
   author: 'Seth Rose',
   headerTitle: 'Seth-Rose.com',
   description: 'Building Tomorrow: Byte by Byte',
