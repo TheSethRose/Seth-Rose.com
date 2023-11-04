@@ -29,9 +29,9 @@ export default function Home({ posts }) {
       {/* About Me Section */}
       <div className='divide-y divide-gray-200 dark:divide-gray-700'>
         <div className='space-y-2 pb-8 pt-6 md:space-y-5'>
-          <h1 className='text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14'>
-            About
-          </h1>
+          <h2 className='text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14'>
+            About Me
+          </h2>
         </div>
         <div className='items-start space-y-2 xl:grid xl:grid-cols-3 xl:gap-x-8 xl:space-y-0'>
           <div className='flex flex-col items-center space-x-2 pt-8'>
@@ -57,7 +57,29 @@ export default function Home({ posts }) {
             </div>
           </div>
           <div className='prose max-w-none pb-8 pt-8 dark:prose-invert xl:col-span-2'>
-            Hello World
+            <p>
+              As a Senior Software Engineer with expertise in the ServiceNow
+              platform, I guide businesses through their digital transformation
+              by crafting tailored solutions that boost efficiency, automate
+              operations, and unlock valuable insights to advance their digital
+              goals. My passion for cutting-edge gadgets fuels my ongoing
+              learning, enhancing my programming skills in languages like
+              JavaScript and Python, and keeping me up-to-date with the latest
+              in AI technology. This relentless pursuit of knowledge ensures
+              that my contributions remain effective and relevant in the rapidly
+              evolving tech landscape.
+            </p>
+            <p>
+              My commitment extends beyond my professional life. I place high
+              value on the balance between work and personal time, understanding
+              that it's essential for personal growth and success in the tech
+              field. This balance helps me stay creative and refreshed. Through
+              my digital portfolio, my aim is to share my journey and insights,
+              inviting the tech community to explore and discuss innovative
+              ideas. By highlighting my projects and sharing my experiences in
+              blog posts, I aim to enrich the collective understanding and spark
+              meaningful engagement in the dynamic arena of technology.
+            </p>
           </div>
         </div>
       </div>
@@ -68,12 +90,9 @@ export default function Home({ posts }) {
       {/* Latest Posts Section */}
       <div className='divide-y divide-gray-200 dark:divide-gray-700'>
         <div className='space-y-2 pb-8 pt-6 md:space-y-5'>
-          <h1 className='text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14'>
+          <h2 className='text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14'>
             Latest Posts
-          </h1>
-          <p className='text-lg leading-7 text-gray-500 dark:text-gray-400'>
-            {siteMetadata.description}
-          </p>
+          </h2>
         </div>
         <ul className='divide-y divide-gray-200 dark:divide-gray-700'>
           {!posts.length && 'No posts found.'}
