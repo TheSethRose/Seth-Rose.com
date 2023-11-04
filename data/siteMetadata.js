@@ -10,13 +10,13 @@ const siteMetadata = {
   siteRepo: 'https://github.com/TheSethRose/seth-rose/',
   siteLogo: '/static/images/logo.png',
   socialBanner: '/static/images/twitter-card.png',
-  mastodon: 'https://mastodon.social/@mastodonuser',
+  mastodon: 'https://mastodon.social/',
   email: 'contact@seth-rose.com',
-  github: 'https://github.com',
-  twitter: 'https://twitter.com/Twitter',
-  facebook: 'https://facebook.com',
+  github: 'https://github.com/TheSethRose',
+  twitter: 'https://x.com/TheSethRose',
+  facebook: 'https://www.facebook.com/Seth.L.Rose/',
   youtube: 'https://youtube.com',
-  linkedin: 'https://www.linkedin.com',
+  linkedin: 'https://www.linkedin.com/in/sethlrose/',
   locale: 'en-US',
   analytics: {
     // If you want to use an analytics provider you have to add it to the
