@@ -78,7 +78,7 @@ export default function Home({ posts }) {
         {/* Right Column for Blurb and Blog Posts */}
         <div className='md:col-span-3'>
           <div className='divide-y divide-gray-200 dark:divide-gray-700 my-1'>
-            <div className='prose max-w-none dark:prose-invert mb-8'>
+            <div className='prose max-w-none dark:prose-invert mb-7'>
               <h1 className='text-2xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-3xl sm:leading-10 md:text-4xl md:leading-14'>
                 Hi there! I'm Seth!
               </h1>
