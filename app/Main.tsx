@@ -79,9 +79,9 @@ export default function Home({ posts }) {
         <div className='md:col-span-3'>
           <div className='divide-y divide-gray-200 dark:divide-gray-700 my-1'>
             <div className='prose max-w-none dark:prose-invert mb-7'>
-              <h1 className='text-2xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-3xl sm:leading-10 md:text-4xl md:leading-14'>
+              <h2 className='text-2xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-3xl sm:leading-10 md:text-4xl md:leading-14'>
                 Hi there! I'm Seth!
-              </h1>
+              </h2>
               <p>
                 I'm a Senior Software Engineer specializing in the ServiceNow
                 platform. I’m passionate about creating streamlined, automated
@@ -125,6 +125,7 @@ export default function Home({ posts }) {
                             <Link href={`/blog/${slug}`}>{title}</Link>
                           </h3>
                           <div className='flex flex-wrap'>
+                            Tags:
                             {tags.map((tag) => (
                               <Tag key={tag} text={tag} />
                             ))}
