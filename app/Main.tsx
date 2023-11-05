@@ -2,7 +2,6 @@ import Link from '@/components/Link'
 import Tag from '@/components/Tag'
 import siteMetadata from '@/data/siteMetadata'
 import { formatDate } from 'pliny/utils/formatDate'
-import SocialIcon from '@/components/social-icons'
 import Image from '@/components/Image'
 import { Authors, allAuthors } from 'contentlayer/generated'
 import { coreContent } from 'pliny/utils/contentlayer'
@@ -49,12 +48,6 @@ export default function Home({ posts }) {
             </h3>
             <div className='text-gray-500 dark:text-gray-400'>{occupation}</div>
             <div className='text-gray-500 dark:text-gray-400'>{company}</div>
-            <div className='flex space-x-3 pt-4'>
-              <SocialIcon kind='mail' href={`mailto:${email}`} />
-              <SocialIcon kind='github' href={github} />
-              <SocialIcon kind='linkedin' href={linkedin} />
-              <SocialIcon kind='twitter' href={twitter} />
-            </div>
           </div>
           <div className='prose max-w-none pt-4 pb-4 dark:prose-invert xl:col-span-2'>
             <p>
@@ -81,7 +74,7 @@ export default function Home({ posts }) {
       <div className='divide-y divide-gray-200 dark:divide-gray-700 my-1'>
         <div className='space-y-2 pb-4 pt-3 md:space-y-5 max-w-6xl mx-auto'>
           <h3 className='text-2xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-3xl sm:leading-10 md:text-4xl md:leading-14'>
-            Latest Posts
+            Latest Blog Posts
           </h3>
         </div>
         <ul className='divide-y divide-gray-200 dark:divide-gray-700 max-w-6xl mx-auto'>
@@ -136,6 +129,7 @@ export default function Home({ posts }) {
           })}
         </ul>
       </div>
+      <div className='mt-4 border-t border-gray-200 dark:border-gray-700'></div>
     </>
   )
 }
