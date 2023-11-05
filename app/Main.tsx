@@ -33,7 +33,7 @@ export default function Home({ posts }) {
   return (
     <>
       {/* About Me Section */}
-      <div className='divide-y divide-gray-200 dark:divide-gray-700'>
+      <div className='divide-y divide-gray-200 dark:divide-gray-700 my-1'>
         <div className='space-y-2 pb-8 pt-6 md:space-y-5 max-w-6xl mx-auto'>
           <h3 className='text-2xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-3xl sm:leading-10 md:text-4xl md:leading-14'>
             Hi there! I'm Seth!
@@ -84,7 +84,7 @@ export default function Home({ posts }) {
       <div className='my-1 border-t border-gray-200 dark:border-gray-700'></div>
 
       {/* Latest Posts Section */}
-      <div className='divide-y divide-gray-200 dark:divide-gray-700'>
+      <div className='divide-y divide-gray-200 dark:divide-gray-700 my-1'>
         <div className='space-y-2 pb-8 pt-6 md:space-y-5 max-w-6xl mx-auto'>
           <h3 className='text-2xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-3xl sm:leading-10 md:text-4xl md:leading-14'>
             Latest Posts
