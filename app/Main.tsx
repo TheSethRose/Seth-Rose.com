@@ -75,7 +75,7 @@ export default function Home({ posts }) {
       </div>
 
       {/* Separator */}
-      <div className='my-1 border-t border-gray-200 dark:border-gray-700'></div>
+      <div className='mt-4 border-t border-gray-200 dark:border-gray-700'></div>
 
       {/* Latest Posts Section */}
       <div className='divide-y divide-gray-200 dark:divide-gray-700 my-1'>
