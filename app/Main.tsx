@@ -55,21 +55,21 @@ export default function Home({ posts }) {
             </h2>
             <div className='mt-4 tag-list'>
               {Object.entries(tagData).map(([tagName, count]) => (
-                <div key={tagName} className='mb-2 mr-5 mt-2'>
+                <span key={tagName}>
                   <a
-                    className='mr-3 text-sm font-medium uppercase text-primary-500 hover:text-primary-600 dark:hover:text-primary-400'
+                    className='text-sm font-medium uppercase text-primary-500 hover:text-primary-600 dark:hover:text-primary-400'
                     href={`/tags/${slug(tagName)}`}
                   >
                     {tagName.toUpperCase()}
-                  </a>
+                  </a>{' '}
                   <a
-                    className='-ml-2 text-sm font-semibold uppercase text-red-600 dark:text-red-300'
+                    className='text-sm font-semibold uppercase text-red-600 dark:text-red-300'
                     aria-label={`View posts tagged ${tagName}`}
                     href={`/tags/${slug(tagName)}`}
                   >
                     ({count})
-                  </a>
-                </div>
+                  </a>{' '}
+                </span>
               ))}
             </div>
           </div>
