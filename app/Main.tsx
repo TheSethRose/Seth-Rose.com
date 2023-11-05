@@ -5,6 +5,7 @@ import { formatDate } from 'pliny/utils/formatDate'
 import Image from '@/components/Image'
 import { Authors, allAuthors } from 'contentlayer/generated'
 import { coreContent } from 'pliny/utils/contentlayer'
+import { slug } from 'github-slugger'
 import tagData from 'app/tag-data.json'
 
 const MAX_DISPLAY = 3
