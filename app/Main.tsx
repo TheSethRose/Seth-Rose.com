@@ -25,41 +25,35 @@ export default function Home({ posts }) {
 
   return (
     <>
-      <div className='divide-y divide-gray-200 dark:divide-gray-700 my-1'>
-        {/* Header Section */}
-        <div className='pt-3 md:space-y-5 max-w-6xl mx-auto'>
-          <h1 className='text-2xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-3xl sm:leading-10 md:text-4xl md:leading-14'>
-            Hi there! I'm Seth!
-          </h1>
+      {/* Content Section */}
+      <div className='grid grid-cols-1 md:grid-cols-4 gap-4 pt-4 max-w-6xl mx-auto'>
+        {/* Left Column for Avatar and Info */}
+        <div className='md:col-span-1'>
+          <div className='flex flex-col items-center'>
+            {avatar && (
+              <Image
+                src={avatar}
+                alt='avatar'
+                width={192}
+                height={192}
+                className='h-36 w-36 rounded-full'
+              />
+            )}
+            <h3 className='pt-4 text-xl font-bold leading-8 tracking-tight'>
+              {name}
+            </h3>
+            <div className='text-gray-500 dark:text-gray-400'>{occupation}</div>
+            <div className='text-gray-500 dark:text-gray-400'>{company}</div>
+          </div>
         </div>
 
-        {/* Content Section */}
-        <div className='grid grid-cols-1 md:grid-cols-4 gap-4 pt-4 max-w-6xl mx-auto'>
-          {/* Left Column for Avatar and Info */}
-          <div className='md:col-span-1'>
-            <div className='flex flex-col items-center md:items-start'>
-              {avatar && (
-                <Image
-                  src={avatar}
-                  alt='avatar'
-                  width={192}
-                  height={192}
-                  className='h-36 w-36 rounded-full'
-                />
-              )}
-              <h3 className='pt-4 text-xl font-bold leading-8 tracking-tight'>
-                {name}
-              </h3>
-              <div className='text-gray-500 dark:text-gray-400'>
-                {occupation}
-              </div>
-              <div className='text-gray-500 dark:text-gray-400'>{company}</div>
-            </div>
-          </div>
-
-          {/* Right Column for Blurb and Blog Posts */}
-          <div className='md:col-span-3'>
+        {/* Right Column for Blurb and Blog Posts */}
+        <div className='md:col-span-3'>
+          <div className='divide-y divide-gray-200 dark:divide-gray-700 my-1'>
             <div className='prose max-w-none dark:prose-invert'>
+              <h1 className='text-2xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-3xl sm:leading-10 md:text-4xl md:leading-14'>
+                Hi there! I'm Seth!
+              </h1>
               <p>
                 I'm a Senior Software Engineer specializing in the ServiceNow
                 platform. I’m passionate about creating streamlined, automated
