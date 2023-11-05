@@ -131,7 +131,9 @@ export default function Home({ posts }) {
                             ))}
                           </div>
                         </div>
-                        <div className='prose max-w-none'>{summary}</div>
+                        <div className='prose max-w-none dark:prose-invert'>
+                          {summary}
+                        </div>
                         <Link
                           href={`/blog/${slug}`}
                           aria-label={`Read "${title}"`}
