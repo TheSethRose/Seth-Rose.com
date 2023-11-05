@@ -47,14 +47,31 @@ export default function Home({ posts }) {
             <div className='text-gray-500 dark:text-gray-400'>{occupation}</div>
             <div className='text-gray-500 dark:text-gray-400'>{company}</div>
           </div>
-          <div className='tag-list'>
-            {Object.entries(tagData).map(([tagName, count]) => (
-              <div key={tagName} className='tag'>
-                <a href={`/tags/${slug(tagName)}`}>
-                  {`${tagName.toUpperCase()} (${count})`}
-                </a>
-              </div>
-            ))}
+
+          {/* Tags Section with Header */}
+          <div className='mt-8'>
+            <h2 className='text-2xl font-extrabold leading-9 tracking-tight'>
+              Tags
+            </h2>
+            <div className='mt-4 tag-list'>
+              {Object.entries(tagData).map(([tagName, count]) => (
+                <div key={tagName} className='mb-2 mr-5 mt-2'>
+                  <a
+                    className='mr-3 text-sm font-medium uppercase text-primary-500 hover:text-primary-600 dark:hover:text-primary-400'
+                    href={`/tags/${slug(tagName)}`}
+                  >
+                    {tagName.toUpperCase()}
+                  </a>
+                  <a
+                    className='-ml-2 text-sm font-semibold uppercase text-red-600 dark:text-red-300'
+                    aria-label={`View posts tagged ${tagName}`}
+                    href={`/tags/${slug(tagName)}`}
+                  >
+                    ({count})
+                  </a>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
 
