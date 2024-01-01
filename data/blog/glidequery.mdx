@@ -1,0 +1,63 @@
+---
+title: GlideQuery - The Modern, Expressive, and Safer Interface for ServiceNow Developers
+date: '2024-01-01'
+tags: ['servicenow', 'development']
+draft: false
+summary: GlideQuery is a modern, expressive, and safer interface to the Now platform, designed to catch mistakes early in the development cycle and behave more like a regular JavaScript API. It simplifies many queries and helps to avoid common performance issues without needing deeper knowledge of GlideRecord, making it a valuable tool for ServiceNow developers.
+---
+
+GlideQuery is a modern, expressive, and safer interface to the Now platform. It's designed to catch mistakes early in the development cycle and behave more like a regular JavaScript API. It's a wrapper over GlideRecord, simplifying many queries and helping to avoid common performance issues without needing deeper knowledge of GlideRecord. 
+
+## GlideQuery vs. GlideRecord: A Performance Perspective
+
+While GlideQuery is a bit slower than GlideRecord, the difference in run times is not significant. However, the added value of GlideQuery lies in its ability to help reduce the lead time of implementation, even if it's not faster. 
+
+## GlideQuery: A Safer Bet
+
+GlideQuery is designed to prevent common pain points experienced during development. For instance, a performance bug using GlideRecord due to a misspelled field in an addQuery call could cause it to query far more records than intended. GlideQuery, with its stricter syntax, would catch such a bug before it reaches the customers. 
+
+## GlideQuery in Action: Reading and Writing Examples
+
+### Reading Data with GlideQuery
+Imagine you need to group users by city and count them. GlideQuery makes this easy:
+
+```javascript
+new GlideQuery('sys_user')
+    .aggregate('count')
+    .groupBy('city')
+    .select()
+    .forEach(function (group) {
+        gs.info(group.group.city + ' has ' + group.count + ' users');
+    });
+```
+This example uses `aggregate` to count users and `groupBy` to group them by city, demonstrating how GlideQuery can simplify complex queries.
+
+### Writing Data with GlideQuery
+When adding a new user to the 'sys_user' table, GlideQuery's `insert` method is straightforward:
+
+```javascript
+new GlideQuery('sys_user')
+    .insert({
+        active: true,
+        name: 'Sam Meylan',
+        city: 'Geneva'
+    })
+    .get();
+```
+This snippet shows how to insert a new record and retrieve it immediately using `get`.
+
+### Updating Data with GlideQuery
+Updating an incident's priority is a common task, and GlideQuery handles it with ease:
+
+```javascript
+new GlideQuery('incident')
+    .where('sys_id', id)
+    .update({priority: 1});
+```
+Here, `where` selects the record, and `update` modifies the 'priority' field, showcasing GlideQuery's capability for updating records.
+
+## Conclusion
+
+While GlideQuery might not replace GlideRecord entirely, it offers an additional layer on top of it, reducing the likelihood of errors and mistakes when manipulating GlideRecord. It's a powerful tool within the ServiceNow platform that enables developers to perform advanced database queries with ease, leading to better insights, improved workflows, and enhanced decision-making.
+
+For more tech insights and discussions, follow me on Twitter / X @TheSethRose. Stay tuned for more articles on ServiceNow development, and as always, happy coding!
